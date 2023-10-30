@@ -1,5 +1,5 @@
 import { AboutUs, Hero, OurProducts } from '@/components'
-import { products } from '@/consts'
+import { overviewPoducts } from '@/consts'
 import { MainLayout } from '@/layouts'
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <AboutUs short />
       <OurProducts
         title="Check our products"
-        products={products}
+        products={overviewPoducts}
         showButton
         darkVersion
       />

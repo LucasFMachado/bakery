@@ -42,6 +42,7 @@ export function OurProducts({
                     width={500}
                     height={500}
                     alt={product.alt}
+                    priority
                     className="object-cover w-full h-full"
                   />
                 </div>

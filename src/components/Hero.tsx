@@ -4,7 +4,7 @@ import Link from 'next/link'
 type HeroProps = {
   title: string
   subtitle?: string
-  shrink?: string
+  shrink?: boolean
 } & (
   | {
       showLink: true
