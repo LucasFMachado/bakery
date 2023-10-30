@@ -1,10 +1,16 @@
-import { Footer, Header } from '@/components'
+import { Hero } from '@/components'
+import { MainLayout } from '@/layouts'
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <Footer />
-    </div>
+    <MainLayout>
+      <Hero
+        title="Bakery"
+        subtitle="Fresh bread daily"
+        showLink
+        linkText="Contact us"
+        linkTo="/contact"
+      />
+    </MainLayout>
   )
 }

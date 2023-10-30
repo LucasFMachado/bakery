@@ -1,4 +1,5 @@
 export * from './Footer/Footer'
 export * from './Header/Header'
+export * from './Hero/Hero'
 export * from './OpeningHours/OpeningHours'
 export * from './SocialMedias/SocialMedias'
