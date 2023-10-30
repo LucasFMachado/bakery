@@ -1,4 +1,5 @@
-import { About, Hero } from '@/components'
+import { About, Hero, OurProducts } from '@/components'
+import { products } from '@/consts'
 import { MainLayout } from '@/layouts'
 
 export default function Home() {
@@ -12,6 +13,12 @@ export default function Home() {
         linkTo="/contact"
       />
       <About short />
+      <OurProducts
+        title="Check our products"
+        products={products}
+        showButton
+        darkVersion
+      />
     </MainLayout>
   )
 }

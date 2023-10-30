@@ -31,3 +31,31 @@ export const openingHours: IOpeningHour[] = [
     officeHour: '6am - 10am',
   },
 ]
+
+export interface IProduct {
+  src: string
+  alt: string
+  title: string
+  category: string
+}
+
+export const products: IProduct[] = [
+  {
+    src: '/assets/images/baguette.jpg',
+    alt: 'Baguette',
+    title: 'Baguette',
+    category: 'Bread',
+  },
+  {
+    src: '/assets/images/croissants.jpg',
+    alt: 'Croissant',
+    title: 'Croissant',
+    category: 'Pastry',
+  },
+  {
+    src: '/assets/images/cookies.jpg',
+    alt: 'Cookie',
+    title: 'Cookie',
+    category: 'Snacks',
+  },
+]
