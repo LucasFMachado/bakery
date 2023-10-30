@@ -19,7 +19,7 @@ export function SocialMedias({ className }: SocialMediasProps) {
             href={socialMedia.url}
             target="_blank"
             rel="noreferrer"
-            className="w-10 h-10 flex items-center justify-center border border-yellow-500 text-black hover:bg-yelllow-500 hover:text-white transition-colors duration-300 rounded-full"
+            className="w-10 h-10 flex items-center justify-center border border-yellow-500 text-black hover:bg-yelllow-500 hover:text-yellow-500 transition-colors duration-300 rounded-full"
           >
             {socialMedia.icon}
           </a>

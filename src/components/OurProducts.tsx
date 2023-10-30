@@ -65,7 +65,7 @@ export function OurProducts({
             <div className="flex justify-center mt-14">
               <button
                 className="border border-yellow-800 py-4 px-8 uppercase tracking-[2px] text-sm hover:bg-yellow-800 hover:text-white transition-colors self-center"
-                onClick={() => router.push('/products', { scroll: false })}
+                onClick={() => router.push('/products')}
               >
                 All products
               </button>

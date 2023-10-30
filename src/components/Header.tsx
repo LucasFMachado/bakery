@@ -40,11 +40,7 @@ export function Header() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4 text-yellow-500">
-            <Link
-              href="/"
-              className="text-3xl font-bold uppercase"
-              scroll={false}
-            >
+            <Link href="/" className="text-3xl font-bold uppercase">
               Bakery
             </Link>
 
