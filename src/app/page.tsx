@@ -1,4 +1,4 @@
-import { About, Hero, OurProducts } from '@/components'
+import { AboutUs, Hero, OurProducts } from '@/components'
 import { products } from '@/consts'
 import { MainLayout } from '@/layouts'
 
@@ -12,7 +12,7 @@ export default function Home() {
         linkText="Contact us"
         linkTo="/contact"
       />
-      <About short />
+      <AboutUs short />
       <OurProducts
         title="Check our products"
         products={products}

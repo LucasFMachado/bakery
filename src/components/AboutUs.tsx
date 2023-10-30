@@ -4,13 +4,13 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { MdDone } from 'react-icons/md'
 
-interface AboutProps {
+interface AboutUsProps {
   short?: boolean
 }
 
 const features = ['Fresh', 'Organic', 'Lorem', 'Ipsum']
 
-export function About({ short }: AboutProps) {
+export function AboutUs({ short }: AboutUsProps) {
   const router = useRouter()
 
   return (
