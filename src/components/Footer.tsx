@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { OpeningHours, SocialMedias } from '..'
+import { OpeningHours, SocialMedias } from '.'
 
 export function Footer() {
   return (
