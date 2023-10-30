@@ -1,4 +1,4 @@
-import { Hero } from '@/components'
+import { About, Hero } from '@/components'
 import { MainLayout } from '@/layouts'
 
 export default function Home() {
@@ -11,6 +11,7 @@ export default function Home() {
         linkText="Contact us"
         linkTo="/contact"
       />
+      <About short />
     </MainLayout>
   )
 }
