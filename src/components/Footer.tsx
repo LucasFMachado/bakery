@@ -28,14 +28,12 @@ export function Footer() {
           <Link
             href="/terms"
             className="text-gray-400 underline hover:no-underline"
-            scroll={false}
           >
             Terms &amp; Conditions
           </Link>
           <Link
             href="/privacy-policy"
             className="text-gray-400 underline hover:no-underline"
-            scroll={false}
           >
             Privacy Policy
           </Link>
