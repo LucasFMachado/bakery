@@ -1,6 +1,7 @@
+import '../styles/globals.css'
+
 import type { Metadata } from 'next'
 import { Roboto_Slab } from 'next/font/google'
-import './globals.css'
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] })
 
@@ -15,11 +16,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={robotoSlab.className}>
-          <main className='flex min-h-screen flex-col'>
-          {children}
-          </main>
+        <main className="flex min-h-screen flex-col">{children}</main>
       </body>
     </html>
   )

@@ -1,19 +1,16 @@
 'use client'
 
 import clsx from 'clsx'
+import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
 import { MdClose, MdMenu } from 'react-icons/md'
-import { twMerge } from 'tailwind-merge'
 
-const menuItemClass =
-  'relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-yellow-500 hover:after:w-full after:transition-all'
+import { headerLinks } from '@/consts'
 
-const mobileMenuItemClass = 'p-4 w-full text-center'
+import { HeaderLink } from '.'
 
 export function Header() {
-  const pathName = usePathname()
   const [scrollYPosition, setScrollYPosition] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -40,51 +37,20 @@ export function Header() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4 text-yellow-500">
-            <Link href="/" className="text-3xl font-bold uppercase">
+            <Link href="/" className="text-3xl font-bold uppercase flex gap-2">
+              <Image
+                src="/assets/logo.png"
+                width={25}
+                height={25}
+                alt="Logo"
+                className="object-contain flex items-center justify-center"
+              />
               Bakery
             </Link>
-
             <nav className="hidden md:flex items-center gap-8">
-              <Link
-                href="/"
-                className={twMerge(
-                  menuItemClass,
-                  `${pathName === '/' ? 'after:w-full' : ''}`,
-                )}
-                scroll={false}
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className={twMerge(
-                  menuItemClass,
-                  `${pathName === '/about' ? 'after:w-full' : ''}`,
-                )}
-                scroll={false}
-              >
-                About us
-              </Link>
-              <Link
-                href="/products"
-                className={twMerge(
-                  menuItemClass,
-                  `${pathName === '/products' ? 'after:w-full' : ''}`,
-                )}
-                scroll={false}
-              >
-                Products
-              </Link>
-              <Link
-                href="/contact"
-                className={twMerge(
-                  menuItemClass,
-                  `${pathName === '/contact' ? 'after:w-full' : ''}`,
-                )}
-                scroll={false}
-              >
-                Contact
-              </Link>
+              {headerLinks.map(link => (
+                <HeaderLink key={link.path} name={link.name} path={link.path} />
+              ))}
             </nav>
             <button
               className="text-2xl h-10 w-10 border border-transparent hover:border-yellow-500 hover:text-white flex md:hidden items-center justify-center transition-colors"
@@ -104,52 +70,20 @@ export function Header() {
       >
         <div className="text-right">
           <button
-            className="text-white text-lg p-4 inline-flex items-center"
+            className="text-white text-2xl p-4 inline-flex items-center hover:text-yellow-600"
             onClick={() => setMobileMenuOpen(false)}
           >
             <MdClose />
           </button>
-          <nav className="flex flex-col items-center text-white divide-y divide-yellow-800 border-t border-yellow-800">
-            <Link
-              href="/"
-              className={twMerge(
-                mobileMenuItemClass,
-                `${pathName === '/' ? 'text-yellow-500' : ''}`,
-              )}
-              scroll={false}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={twMerge(
-                mobileMenuItemClass,
-                `${pathName === '/about' ? 'text-yellow-500' : ''}`,
-              )}
-              scroll={false}
-            >
-              About us
-            </Link>
-            <Link
-              href="/products"
-              className={twMerge(
-                mobileMenuItemClass,
-                `${pathName === '/products' ? 'text-yellow-500' : ''}`,
-              )}
-              scroll={false}
-            >
-              Products
-            </Link>
-            <Link
-              href="/contact"
-              className={twMerge(
-                mobileMenuItemClass,
-                `${pathName === '/contact' ? 'text-yellow-500' : ''}`,
-              )}
-              scroll={false}
-            >
-              Contact
-            </Link>
+          <nav className="flex flex-col items-center text-white divide-y divide-yellow-800 border-b border-yellow-800">
+            {headerLinks.map(link => (
+              <HeaderLink
+                key={link.path}
+                name={link.name}
+                path={link.path}
+                mobile
+              />
+            ))}
           </nav>
         </div>
       </div>

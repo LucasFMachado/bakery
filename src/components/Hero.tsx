@@ -40,7 +40,6 @@ export function Hero({
           {showLink && (
             <Link
               href={linkTo}
-              scroll={false}
               className="border border-yellow-500 py-4 px-8 uppercase tracking-[2px] text-sm hover:bg-yellow-500 hover:text-white transition-colors self-center "
             >
               {linkText}

@@ -1,6 +1,7 @@
 export * from './AboutUs'
 export * from './Footer'
 export * from './Header'
+export * from './HeaderLink'
 export * from './Hero'
 export * from './OpeningHours'
 export * from './OurProducts'

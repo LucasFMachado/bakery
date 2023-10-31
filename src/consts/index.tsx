@@ -104,3 +104,27 @@ export const allProducts: IProduct[] = [
     category: 'Bread',
   },
 ]
+
+interface IHeaderLinks {
+  name: string
+  path: string
+}
+
+export const headerLinks: IHeaderLinks[] = [
+  {
+    name: 'Home',
+    path: '/',
+  },
+  {
+    name: 'About us',
+    path: '/about',
+  },
+  {
+    name: 'Products',
+    path: '/products',
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+  },
+]
