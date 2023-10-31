@@ -1,5 +1,7 @@
 # Bakery
 
+Note: The project was deployed, and you can also check it [here](https://bakery-pi-seven.vercel.app) .
+
 ## Getting Started
 
 First, install project dependencies and run (make sure you are in the root folder of the project):
