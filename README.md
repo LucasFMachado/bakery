@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Bakery
 
 ## Getting Started
 
-First, run the development server:
-
+First, install project dependencies and run (make sure you are in the root folder of the project):
 ```bash
-npm run dev
+# Install dependencies:
+yarn
 # or
+npm install
+
+# Run project:
 yarn dev
 # or
-pnpm dev
-# or
-bun dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<hr />
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technical choices:
 
-## Learn More
+**- Project creation:**
+  
+  I created the project using create next-app (https://nextjs.org/docs/api-reference/create-next-app). The Next version used was 14, and the project uses the new concepts and features of this version.
 
-To learn more about Next.js, take a look at the following resources:
+**- Styles:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  For the styling of the project, I used the **tailwindcss** framework. Because it has a very good integration with the new features of NextJS (like Server-Side Rendering, for example).
+  I also used **tailwind-merge** and **clsx** libraries for merging and overriding classes when necessary, so that componentization becomes easier.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**- Code styling:**
 
-## Deploy on Vercel
+  For pattern of project's code, I used the eslint and prettier libraries, so that coding rules and patterns could be implemented.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Main technologies used in the project:
+
+* [NextJS](https://nextjs.org)
+* [TypesCript](https://www.typescriptlang.org)
+* [Tailwind CSS](https://tailwindcss.com)
+* [Clsx](https://www.npmjs.com/package/clsx)
+* [Tailwind Merge](https://www.npmjs.com/package/tailwind-merge)
+* [ESLint](https://eslint.org)
+* [Prettier](https://prettier.io)
+
+
+## Project ovewview:
+  The project was built responsively, with full support for mobile devices.
+
+Project layout on desktop:
+<br />
+![p1](https://github.com/LucasFMachado/bakery/assets/28274599/b6ddada5-70b4-470c-9867-b9f416841951)
+
+<br />
+
+Project layout on mobile:
+<br />
+![mobile 1](https://github.com/LucasFMachado/bakery/assets/28274599/b83942c5-f0b8-45a4-8355-75bbff199368)
